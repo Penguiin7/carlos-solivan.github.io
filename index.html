@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Maggie's Amazing Website!</title>
+        <title>Solivan's Landing Pad</title>
            <style>
             body {
-                background: rgb(125, 198, 205);
+                 background: rgb(0, 102, 255);
                 color: rgb(45, 45, 45);
                 padding: 10px;
                 font-family: arial;
@@ -20,11 +20,13 @@
     
             /* navigation menu */
             nav {
-                background: rgb(242, 60, 4);
+                background: rgb(255, 191, 0);
                 margin: 0 auto;
                 margin-bottom: 20px;
                 display: flex;
-                padding: 10px;
+                padding: 10px 40px;
+                border: 2px solid #a1a1a1;
+                width: 400px;
             }
             nav header {
                 display: flex;
@@ -46,8 +48,9 @@
     
             /* main container area beneath menu */
             main {
-                background: rgb(245, 238, 219);
+                background: rgb(230, 230, 230);
                 display: flex;
+                margin: 10px;
             }
             [class=sidebar] {
                 margin-right: 25px;
@@ -63,21 +66,33 @@
             [class=interests] header {
                 font-size: 1.25em;
             }
+            ul.professional-interests {
+                display:none;
+            }
         
         </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("button").click(function(){
+                    $("ul.professional-interests").fadeIn();
+                });
+            });
+        </script>
     </head>
     <body>
         <div id="all-contents">
             <nav>
+                <header>Solivan's Landing Pad</header>
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href=<a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
                 </ul>
             </nav>
             
             <main>
              <div class="sidebar">
-                 <img src="https://vignette4.wikia.nocookie.net/marvel_dc/images/0/08/Black_Manta_0002.jpg/revision/latest/scale-to-width-down/330?cb=20110116003137">
+                 <img src="http://vignette4.wikia.nocookie.net/kidicarus/images/c/c8/Pit_dramatic_pose_e3_2011_press_kit.png/revision/latest/scale-to-width-down/2000?cb=20160122055256">
              </div>
              
              <div class="content">
@@ -92,6 +107,17 @@
                  </ul>
                 </section>
              </div>
+            </main>
+            <main>
+                <div class="content">
+                    <header>Professional Interests</header>
+                    <section class="interests"></section>
+                    <button>Down here Pit!</button>
+                    <ul class="professional-interests">
+                        <li>Software Development</li>
+                        <li>Pathology</li>
+                    </ul>
+                </div>
             </main>
         </div>
     </body>
